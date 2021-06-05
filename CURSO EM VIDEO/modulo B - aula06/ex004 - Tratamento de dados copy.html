@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-widht=1.0">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Aula 04 - JavaScript</title>
+    <style>
+        body{
+            background-color: gray;
+            color: white;
+            text-align: center;
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo !</h1>
+    <p>Já me livrei da Maldição</p>
+    <h2>AULA 6 - EX004</h2>
+    <script> 
+        var n1 = Number.parseFloat(window.prompt("Digite um número.")); //STRING
+        var n2 = Number.parseFloat(window.prompt("Digite outro número.")); //STRING
+        var soma = n1 + n2;
+        window.alert(`Uau, a soma do ${n1} e ${n2} é de: ${soma}`); // OU String(soma)
+        // + serve para concatenação (strint) e também para somar (numeros)
+        //window.prompt retorna a resposta como STRING
+
+
+        /*TEMOS ENTÃO QUE CONVERTER A STRING, EM NÚMERO. USANOD O COMANDO ABAIXO:
+        Number.parseInt(n) PARA NUMEROS INTEIROS
+        Number.parseFloat(n) PARA NUMEROS REAIS.*/
+
+        /* POSSO TAMBEM COLOCAR SÓ Number(n), ai o javascript se vira, mas nem sempre funciona, então tem que usar os comandos especificos acima*/
+
+        /* Mesma coisa para STRING*/
+    </script>
+</body>
+</html>
