@@ -22,10 +22,15 @@
     <p>Já me livrei da Maldição</p>
     <h2>AULA 6 - EX004</h2>
     <script> 
-        var n1 = Number.parseFloat(window.prompt("Digite um número.")); //STRING
-        var n2 = Number.parseFloat(window.prompt("Digite outro número.")); //STRING
-        var soma = n1 + n2;
-        window.alert(`Uau, a soma do ${n1} e ${n2} é de: ${soma}`); // OU String(soma)
+        var n1 = Number(window.prompt("Digite um número.")); //STRING
+        var nome = window.prompt("Digite seu nome."); //STRING
+        var n3 = Number.parseInt(window.prompt("Digite mais um número.")); //STRING
+        var n4 = Number.parseFloat(window.prompt("Digite ultimo número.")); //STRING
+        var soma = n1 + n2 + n4;
+        document.write(`Uau, a soma do ${n1}, ${n2} e ${n4} é de: ${soma}`); // OU String(soma)
+        document.write(`O 3º número que você digitou, é o ${n4}`);
+        document.write(`Seu nome em letra Maiuscula ${nome.toUpperCase()}`)
+
         // + serve para concatenação (strint) e também para somar (numeros)
         //window.prompt retorna a resposta como STRING
 
@@ -37,6 +42,7 @@
         /* POSSO TAMBEM COLOCAR SÓ Number(n), ai o javascript se vira, mas nem sempre funciona, então tem que usar os comandos especificos acima*/
 
         /* Mesma coisa para STRING*/
+        n4.toLocaleString('pt-br', {style: 'currency', currency, 'BRL'}) /* COMANDO PARA CONVERTER EM FORMATAÇÃO DE MOEDA, POSSO COLOCAR USD, EUR... qualquer moeda.*/
     </script>
 </body>
 </html>
