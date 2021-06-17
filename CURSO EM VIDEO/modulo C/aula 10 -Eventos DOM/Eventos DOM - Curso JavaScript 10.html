@@ -2,7 +2,6 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-widht=1.0">
     <meta name="author" content="">
     <meta name="keywords" content="">
@@ -28,9 +27,30 @@
 </head>
 <body>
     <h1>EVENTOS DOM</h1>
-        <div id="area"><p>Interaja</p></div>
+        <div id="area" ><p>Interaja !</p></div>
     <script> 
-
+            var a = window.document.getElementById('area');/*vamos deixar aqui, para não acontecer o que está descrito abaixo*/
+            a.addEventListener('click', clicar) /* FAZ COM QUE O HTML FIQUE LIMPO, SÓ O JAVASCRIP VAI PRESTAR ATENÇÃO NOS COMANDOS*/
+            a.addEventListener('mouseover', over)/*NO EVENTLISTENER, EU NÃO PRECISO ESCREVER "ONMOUSEOVER", APENAS "MOUSEOVER" SERVE.*/
+            a.addEventListener('mouseout', sair)
+        function clicar() {
+            /*var a = window.document.getElementById('area'); DEIXAR A VARIAVEL DENTRO DA FUNCTION, DA PROBLEMA DE MEMORIA, AO USAR 2X*/
+            a.innerHTML = 'clicou !';
+            a.style.background = 'blue'
+            //b.style.backgroundColor = 'black'
+        }
+        function entrar() {
+            /*var a = window.document.getElementById('area'); DEIXAR A VARIAVEL DENTRO DA FUNCTION, DA PROBLEMA DE MEMORIA, AO USAR 2X*/
+            //a.innerHTML = 'Entrou';
+        }
+        function sair() {
+            a.innerHTML = 'saiu';
+            a.style.background = 'red'
+        }
+        function over() {
+            a.innerHTML = 'entrou';
+            a.style.background = 'green'
+        }
     </script>
 </body>
 </html>
