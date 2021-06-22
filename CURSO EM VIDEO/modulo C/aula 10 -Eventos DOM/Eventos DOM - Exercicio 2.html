@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-widht=1.0">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Eventos DOM - Curso JavaScript #10</title>
+    <style>
+        html{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: gray;
+            color: white;
+            text-align: center;
+            font: normal 20pt arial;
+        }
+        .item1{
+            width: 250px;
+            height: 150px;
+            background-color: green;
+            margin: 0 auto;
+            padding-top: 30px;
+            box-sizing: border-box;
+        }
+        #resultado{
+            margin-top: 30px;
+        }
+        .botao{
+            width: 30px;
+            height: 30px;
+            background-color: blue;
+        }
+        nav .navegador{
+            display: none;
+            width: 250px;
+        }
+        nav .navegador ul{
+            list-style: none;
+        }
+        nav .navegador ul li {
+            border: 2px solid gray;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Esse é meu primeiro exercicio.</h1>
+        <h2>Esse será nosso primeiro item:</h2>
+        <div class="item1" id="item1">Vou ficar Azul !</div>
+        <div class="item1" id="item2">Vou ficar preto !</div>
+    </header>
+    <nav>
+        <div class="mobile">
+            <div class="botao"></div>
+            <div class="navegador" id="">
+                <ul>
+                    <li>Home</li>
+                    <li>Galeria</li>
+                    <li>Contato</li>
+                    <li>Sobre Nós</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="Calculadora">
+        <input type="number" name="text1" id="number1">
+        <input type="number" name="text2" id="number2">
+        <input type="button" value="Somar" onclick="somar()"><!--não esquecer os parenteses ! fiquei 30 min nisso.-->
+        <div id="resultado" ><p>O resultado é:</p></div>
+    </div>
+    <script>
+        function somar(){
+            var n1 = window.document.getElementById('number1')
+            var n2 = window.document.getElementById('number2')
+            var res = window.document.getElementById('resultado')
+            var num1 = Number(n1.value)
+            var num2 = Number(n2.value)
+            var s = num1 + num2
+            res.innerHTML = `A soma de ${num1} e de ${num2} é de ${s}`
+        }
+
+        var s = window.document.getElementById('number1')
+        var a = window.document.getElementById('item1')
+        var b = window.document.querySelector('div#item2')
+        var c = window.document.querySelector('nav .mobile .botao')
+        var d = window.document.querySelector('nav .mobile .navegador')
+        a.addEventListener('mouseover', clicar)
+        a.addEventListener('mouseout', mouseup)
+        b.addEventListener('mouseover', clicar2)
+        b.addEventListener('mouseout', mouseup2)
+        c.addEventListener('mouseover', mouseup3)
+        c.addEventListener('click', mouseover)
+        function clicar(){
+            a.style.backgroundColor = 'blue'
+            a.innerHTML = 'Azul como o céu.'
+            a.style.width = '100%'
+            a.style.transition = '2s'
+        }
+        function mouseup(){
+            a.style.backgroundColor = 'green'
+            a.innerHTML = 'Quem foi que escolheu verde ?'
+            a.style.width = '250px'
+            a.style.transition = '2s'
+        }
+        function clicar2(){
+            b.style.backgroundColor = 'black'
+            b.style.color = 'white'
+            b.innerHTML = 'To pretão mano'
+            b.style.width = '100%'
+            b.style.transition = '2s'
+        }
+        function mouseup2(){
+            b.style.backgroundColor = 'green'
+            b.innerHTML = 'Droga, to verde novamente'
+            b.style.width = '250px'
+            b.style.transition = '2s'
+        }
+        function mouseup3(){
+            d.style.display = 'block'
+            d.style.transition = '2s'
+
+        }
+        function mouseover(){
+            d.style.display = 'none'
+            d.style.transition = '2s'
+        }
+
+    </script>
+</body>
+</html>

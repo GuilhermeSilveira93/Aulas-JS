@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paises</title>
+</head>
+<body>
+    <h1>Sistema de região</h1>
+    <span>De qual região você é ?</span>
+    <input type="text" id="pais">
+    <input type="button" value="Enviar" id="botao">
+    <div id="resultado"></div>
+
+    <script>
+        var country = window.document.querySelector('input#pais')
+        var acao = window.document.querySelector('input#botao')
+        acao.addEventListener('click', clicar)
+        var res = window.document.getElementById('resultado')
+
+        function clicar(){
+            if( country == 'Brasil'){
+                res.innerHTML = `<p>Muito legal ! Você é <strong>Brasileiro!</strong></p>`
+            }else{
+                res.innerHTML = `Olá gringo ! Essa é uma pagina brasileira, vaza !`
+            }
+        }
+    </script>
+</body>
+</html>
