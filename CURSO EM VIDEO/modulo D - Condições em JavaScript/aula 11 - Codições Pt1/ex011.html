@@ -9,23 +9,24 @@
 <body>
     <h1>Sistema de região</h1>
     <span>De qual região você é ?</span>
-    <input type="text" id="pais">
+    <input type="text" id="pais" value="">
     <input type="button" value="Enviar" id="botao">
     <div id="resultado"></div>
 
     <script>
-        var country = window.document.querySelector('input#pais')
-        var acao = window.document.querySelector('input#botao')
-        acao.addEventListener('click', clicar)
-        var res = window.document.getElementById('resultado')
+        //var pais = window.document.getElementById('pais')
+        var pais = window.document.getElementById('pais')
+        var botao = window.document.getElementById('botao')
+        var resultado = window.document.getElementById('resultado')
+        botao.addEventListener('click', clicar)
 
-        function clicar(){
-            if( country == 'Brasil'){
-                res.innerHTML = `<p>Muito legal ! Você é <strong>Brasileiro!</strong></p>`
-            }else{
-                res.innerHTML = `Olá gringo ! Essa é uma pagina brasileira, vaza !`
+            function clicar(){
+                if ( pais.value == 'Brasil' ){
+                    resultado.innerHTML = `Amigão, aqui é ${pais.value}, tamo junto !`
+                } else{
+                    resultado.innerHTML = `Pena que não é Brasileiro, volte para ${pais.value}`
+                }
             }
-        }
     </script>
 </body>
 </html>
