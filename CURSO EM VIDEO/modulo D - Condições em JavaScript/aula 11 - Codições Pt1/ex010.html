@@ -19,9 +19,9 @@
         clicar1.addEventListener('click', clicar)
 
         function clicar(){
-            var txtvel = Number(vel.value)
-            res.innerHTML = `<p>Sua velocidade atual é de : <strong>${txtvel}km/h </strong></p>`
-            if (txtvel > 60){
+            var numvel = Number(vel.value)
+            res.innerHTML = `<p>Resultado: Sua velocidade atual é de : <strong>${numvel}km/h </strong></p>`
+            if (numvel > 60){
                 res.innerHTML += `Amigo, prepara o bolso, uma multa está chegando !`
             }else{
                 res.innerHTML += `<p>Dirija sempre com sinto de Segurança !</p>`
