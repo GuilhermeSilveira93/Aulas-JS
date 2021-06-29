@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Modelo - EX001</title>
+</head>
+<body>
+    <main>
+        <div class="center">
+            <section class="conteudo">
+                <h1>Verificador de Idade</h1>
+                <section class="conteudo2" id="conteudo2">
+                        <p>Ano de Nasciento:
+                            <input type="number" name="textano" id="textano" min="0">
+                        </p>
+                        <p>Sexo:
+                            <input type="radio" name="radsex" id="masc" checked>
+                            <label for="masc">Masculino</label>
+                            <input type="radio" name="radsex" id="femi" >
+                            <label for="femi">Feminino</label>
+                        </p>
+                        <p>
+                            <input type="button" value="verificar" onclick="verif()">
+                        </p>
+                        <div id="res">Preencha os dados acima para ver o resultado:</div>
+                    </section>
+            </section>
+        </div>
+    </main>
+    <script src="script/script.js"></script>
+</body>
+</html>
