@@ -3,7 +3,7 @@ function verif(){
     var ano = data.getFullYear()  //ANO ATUAL, PARA PODER SABER A IDADE SUBITRAINDO
     var fano = window.document.getElementById('textano')
     var res = window.document.querySelector('div#res')
-        if (fano.value == 0 || Number(fano.value) > ano) {
+        if (fano.value == 0 || fano.value > ano) {
             window.alert('[ERRO]: Verifique os dados e tente novamente !')
         } else {
             var fsex = window.document.getElementsByName('radsex')
