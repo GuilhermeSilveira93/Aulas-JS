@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+}
+body>h1,p{
+    text-align: center;
+}
+h1{
+    margin: 50px;
+}
+.center{
+    font-weight: bold;
+    font-size: 18pt;
+    max-width: 1200px;
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    background-color: rgb(156, 156, 156);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.295);
+}
+main{
+    padding: 50px;
+}
+input{
+    border-radius: 25px;
+    border: none;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+#contar{
+    cursor: pointer;
+    width: 100px;
+    padding: 10px;
+    border: 1px solid red;
+    background-color: white;
+}
