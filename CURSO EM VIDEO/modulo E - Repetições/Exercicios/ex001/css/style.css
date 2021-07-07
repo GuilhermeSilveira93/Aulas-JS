@@ -15,6 +15,7 @@ h1{
     margin: 50px;
 }
 .center{
+    text-align: center;
     font-weight: bold;
     font-size: 18pt;
     max-width: 1200px;
@@ -28,6 +29,7 @@ main{
     padding: 50px;
 }
 input{
+    text-align: center;
     border-radius: 25px;
     border: none;
     padding: 5px;
