@@ -1,4 +1,4 @@
 //VARIAVEL COMPOSTA//
-var num = [10,8,'Guilherme',15]
-
-console.log(`Nosso valor é o ${num.sort()}`)
+var num = [7,9,8,3,5,2,6,1,4,10]
+num.sort()
+console.log(num)
