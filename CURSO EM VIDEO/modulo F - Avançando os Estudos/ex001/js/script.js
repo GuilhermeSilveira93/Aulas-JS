@@ -1,11 +1,14 @@
-function clicar(){
-    var num = window.document.getElementById('txti')
-    var tab = window.document.getElementById('seltab')
-        if(num.value.length == 0 || num.value > 100){
-            window.alert('[ERRO] Digite um número Válido !')
-        }else{
-            let item = document.createElement('option')
-            item.text = `${num}`
-            tab.appendChild(item)
-        }
-} 
+/* Antes de programar, vamos adicionar os comandos basicos*/
+let num = window.document.querySelector('input#fnum')
+let lista = window.document.querySelector('select#flista')
+let res = window.document.querySelector('div#res')
+let valores = [] //será usado para receber e analizar os dados recebidos
+
+function adicionar(){
+    if(isNumero(num.value) && !inLista()){
+        window.alert('[ERRO] - Digite um valor entre 1 e 100')
+    } else{
+        window.alert('Valor Invalido ou já digitado.')
+    }
+}
+
